@@ -1,0 +1,7 @@
+<div>
+  <h1 class="font-bold text-4xl">Les massages de Pauline</h1>
+  <%= cl_image_tag @home.home_primary_photo.key, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @home.home_secondary_photo.key, height: 300, width: 400, crop: :fill %>
+  <h2><%= @title %></h2>
+  <p><%= @description %></p>
+</div>

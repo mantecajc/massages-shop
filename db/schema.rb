@@ -45,8 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_03_213541) do
   create_table "pages_contents", force: :cascade do |t|
     t.string "home_title"
     t.text "home_description"
-    t.string "home_primary_photo"
-    t.string "home_secondary_photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
