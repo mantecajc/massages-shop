@@ -12,8 +12,26 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <nav class="navbar">
+      <div class="bg-white font-comfortaa flex justify-between" id="navbar">
+        <a class="brand" href="#">My portfolio</a>
+        <ul class="flex">
+          <li>
+            <a href="#">Les massages</a>
+          </li>
+          <li>
+            <a href="#">Offrir un soin</a>
+          </li>
+          <li>
+            <a href="#">Info pratiques</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <div class="w-full lg:w-auto block lg:flex lg:items-center lg:inline-block hidden" id="navbar">
+      <a class="brand" href="#">Les massages de Pauline</a>
+    </div>
+    <%= yield %>
   </body>
 </html>
