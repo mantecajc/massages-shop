@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LESMassagesDePauline</title>
+    <title>Les Massages De Pauline</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,12 +9,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <nav class="navbar">
       <div class="bg-white font-comfortaa flex justify-between" id="navbar">
-        <a class="brand" href="#">My portfolio</a>
+        <a class="brand" href="#">Les massages de Pauline</a>
         <ul class="flex">
           <li>
             <a href="#">Les massages</a>
@@ -29,9 +33,9 @@
       </div>
     </nav>
       
-    <div class="w-full lg:w-auto block lg:flex lg:items-center lg:inline-block hidden" id="navbar">
-      <a class="brand" href="#">Les massages de Pauline</a>
+    <div class="bg-primaryBg pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
+      <%= yield %>
     </div>
-    <%= yield %>
+
   </body>
 </html>

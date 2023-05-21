@@ -10,7 +10,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'charmonman': ['Charmonman', 'cursive'],
+        'comfortaa': ['Comfortaa'],
+      },
+      colors: {
+        primaryGreen: '#347E7F',
+        titleGray: '#2D2E36',
+        primaryBg: '#FBFBF7',
       },
     },
   },
