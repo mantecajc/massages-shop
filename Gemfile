@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.3"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -44,6 +44,12 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+
+gem 'cloudinary', '~> 1.25'
+
+gem 'dotenv-rails', groups: [:development, :test]
+# TODO: Set cloudinary and heroku
+# TODO: https://kitt.lewagon.com/camps/551/lectures/05-Rails%2F05-Rails-MC-with-images#source
 
 # Use Sass to process CSS
 # gem "sassc-rails"
