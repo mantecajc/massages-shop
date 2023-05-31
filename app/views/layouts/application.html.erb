@@ -17,25 +17,39 @@
 
   <body>
     <nav class="navbar">
-      <div class="bg-white font-comfortaa flex justify-between" id="navbar">
-        <a class="brand" href="#">Les massages de Pauline</a>
-        <ul class="flex">
-          <li>
-            <a href="#">Les massages</a>
-          </li>
-          <li>
+      <div class="bg-[#FBFBF7] font-confortaa flex justify-between text-[#347E7F] border-b border-[#347E7F] h-[135px]" id="navbar">
+        <div class="ml-11 md:ml-36">
+          <img src="<%= asset_path 'logo.svg' %>" alt="logo">
+        </div>
+        <!--<a class="brand" href="#">My portfolio</a>-->
+        <div class="flex items-center mr-11 lg:hidden">
+          <img src="<%= asset_path 'menu.svg' %>" alt="menu" class="w-[30px] h-[30px]" onclick="openMenu();">
+        </div>
+        <div id="menu" class="lg:flex hidden items-center text-[22px] mr-36">
+          <a href="#" class="pr-8">Les massages</a>
+          <!--
             <a href="#">Offrir un soin</a>
-          </li>
-          <li>
-            <a href="#">Info pratiques</a>
-          </li>
-        </ul>
+          -->
+          <a href="#">Infos pratiques</a>
+        </div>
       </div>
     </nav>
-      
+
     <div class="bg-primaryBg pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
       <%= yield %>
     </div>
+
+    <script>
+      function openMenu() {
+        let menu = document.getElementById('menu');
+
+        if(menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      }
+    </script>
 
   </body>
 </html>
