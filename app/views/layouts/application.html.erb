@@ -18,19 +18,24 @@
   <body>
     <nav class="navbar">
       <div class="bg-[#FBFBF7] font-confortaa flex justify-between text-[#347E7F] border-b border-[#347E7F] h-[135px]" id="navbar">
+
         <div class="ml-11 md:ml-36">
           <img src="<%= asset_path 'logo.svg' %>" alt="logo">
         </div>
+
         <!--<a class="brand" href="#">My portfolio</a>-->
         <div class="flex items-center mr-11 lg:hidden">
           <img src="<%= asset_path 'menu.svg' %>" alt="menu" class="w-[30px] h-[30px]" onclick="openMenu();">
         </div>
-        <div id="menu" class="lg:flex hidden items-center text-[22px] mr-36">
-          <a href="#" class="pr-8">Les massages</a>
-          <!--
-            <a href="#">Offrir un soin</a>
-          -->
-          <a href="#">Infos pratiques</a>
+
+        <div id="menu" class="bg-[#347E7F] text-[#FBFBF7] hidden items-center text-[22px] flex-grow justify-between absolute top-[135px] w-full pt-2 pb-2 lg:relative lg:grow-0 lg:mr-36 lg:flex lg:text-[#347E7F] lg:bg-[#FBFBF7] lg:top-0 lg:w-auto lg:pt-0 lg:pb-0">
+          <div class="flex flex-col lg:flex-row">
+            <a href="#" class="border-b border-[#FBFBF7] pb-1 pl-8 lg:pl-0 lg:pb-0 lg:pr-8">Les massages</a>
+            <!--
+              <a href="#">Offrir un soin</a>
+            -->
+            <a href="#" class="pl-8 pt-1 lg:pl-0 lg:pt-0">Infos pratiques</a>
+          </div>
         </div>
       </div>
     </nav>
