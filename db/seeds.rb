@@ -8,7 +8,10 @@ unless PagesContent.first.nil?
   PagesContent.destroy_all
 end
 
+User.destroy_all
+
 puts 'Creating db...'
+User.create!(email: "admin@gmail.com", password: "123456")
 
 home = PagesContent.new(
   home_title: "Qui suis-je en quelques mots ?",
