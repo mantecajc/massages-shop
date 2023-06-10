@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
-  # TODO: set fly.io https://www.youtube.com/watch?v=E6UCy20ZKtA&ab_channel=Deanin
-  # Init styles.
-  
+  skip_before_action :authenticate_user!, only: :home
+
   def home
     @home = PagesContent.first
     @title = @home.try(:home_title)

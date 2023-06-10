@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <%= render "shared/flashes" %>
     <nav class="navbar">
       <div class="bg-white font-comfortaa flex justify-between" id="navbar">
         <a class="brand" href="#">Les massages de Pauline</a>
@@ -33,7 +34,7 @@
       </div>
     </nav>
       
-    <div class="bg-primaryBg pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
+    <div class="bg-snow-drift-500 pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
       <%= yield %>
     </div>
 
