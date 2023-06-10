@@ -1,10 +1,8 @@
 class HomeController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     @home = Home.first
-    @title = @home.try(:title)
-    @description = @home.try(:description)
-    @primary_photo = @home.try(:primary_photo)
-    @secondary_photo = @home.try(:secondary_photo)
   end
 
   def edit
@@ -17,7 +15,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       if @home.update(home_params)
         format.turbo_stream
-        format.html { redirect_to home_index_path, notice: "Home was successfully updated." }
+        format.html { redirect_to home_index_path, notice: "La page d'accueil a été mise à jour avec succès." }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @home.errors, status: :unprocessable_entity }
