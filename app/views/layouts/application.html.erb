@@ -16,13 +16,23 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render "shared/navbar_mobile" %>
+    <% unless devise_controller? && action_name == "new" %>
+      <%= render "shared/navbar" %>
+      <%= render "shared/navbar_mobile" %>
+    <% end %>
+
     <div id="flash" class="flash">
       <%= render "shared/flash" %>
     </div>
+
     <%= turbo_frame_tag "modal" %>
-    <div class="bg-primaryBg pt-0 md:px-0 lg:px-28 lg:py-0 xl:px-40 xl:py-0">
+
+    <% if user_signed_in? %>
+      <%= render "shared/admin_banner" %>
+    <% end %>
+
+
+    <div class="h-screen bg-snow-drift-500 pt-0 md:px-0 lg:px-28 lg:py-0 xl:px-40 xl:py-0">
       <%= yield %>
     </div>
   </body>

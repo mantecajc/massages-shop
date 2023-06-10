@@ -8,7 +8,10 @@ unless Home.first.nil?
   Home.destroy_all
 end
 
+User.destroy_all
+
 puts 'Creating db...'
+User.create!(email: "admin@gmail.com", password: "123456")
 
 home = Home.new(
   title: "Qui suis-je en quelques mots ?",
