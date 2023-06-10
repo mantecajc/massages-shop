@@ -46,10 +46,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'cloudinary', '~> 1.25'
-
 gem 'dotenv-rails', groups: [:development, :test]
-# TODO: Set cloudinary and heroku
-# TODO: https://kitt.lewagon.com/camps/551/lectures/05-Rails%2F05-Rails-MC-with-images#source
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -82,3 +79,4 @@ group :test do
 end
 
 gem "view_component", "~> 3.3"
+gem "devise", "~> 4.9"
