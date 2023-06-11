@@ -30,7 +30,7 @@
           autocomplete: "email", placeholder: "Adresse e-mail", class:
           "appearance-none rounded-none relative block w-full px-3 py-2 border
           border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md
-          focus:outline-none focus:ring-indigo-500 focus:border-indigo-500
+          focus:outline-none focus:ring-ripe-lemon-500 focus:border-ripe-lemon-500
           focus:z-10 sm:text-sm" %>
         </div>
         <div>
@@ -39,7 +39,7 @@
           "current-password", placeholder: "Mot de passe", class: "appearance-none
           rounded-none relative block w-full px-3 py-2 border border-gray-300
           placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none
-          focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+          focus:ring-ripe-lemon-500 focus:border-ripe-lemon-500 focus:z-10 sm:text-sm"
           %>
         </div>
       </div>
@@ -49,13 +49,13 @@
       <%# Bloquear el signup %>
       <div class="flex items-center justify-between">
         <div class="field flex items-center">
-          <%= f.check_box :remember_me, class: "h-4 w-4 text-indigo-600
-          focus:ring-indigo-500 border-gray-300 rounded" %> 
+          <%= f.check_box :remember_me, class: "h-4 w-4 text-paradiso-600
+          focus:ring-paradiso-500 border-gray-300 rounded" %> 
           <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-900" do %>Rester connecté<% end %>
         </div>
         <div class="text-sm">
           <% if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <%= link_to "Vous avez oublié votre mot de passe ?", new_password_path(resource_name), class: "font-medium text-indigo-600 hover:text-indigo-500" %>
+          <%= link_to "Vous avez oublié votre mot de passe ?", new_password_path(resource_name), class: "font-medium text-paradiso-500 hover:text-paradiso-600" %>
           <% end %>
         </div>
       </div>
@@ -63,9 +63,9 @@
       <div class="actions">
         <%= f.submit "Me connecter", class: "actions group relative w-full flex
         justify-center py-2 px-4 border border-transparent text-sm font-medium
-        rounded-md text-white bg-indigo-600 hover:bg-indigo-700
+        rounded-md text-white bg-paradiso-500 hover:bg-paradiso-600
         focus:outline-none focus:ring-2 focus:ring-offset-2
-        focus:ring-indigo-500" %>
+        focus:ring-ripe-lemon-500" %>
       </div>
     </div>
     <% end %>

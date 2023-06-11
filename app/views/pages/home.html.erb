@@ -1,6 +1,6 @@
 <div class="flex flex-col lg:flex-row overflow-y-auto overflow-x-hidden lg:overflow-visible">
   <div class="flex flex-col items-center grow w-full lg:mr-2 lg:items-left">
-    <h1 class="font-bold font-charmonman text-primaryGreen py-4 px-4 text-[1.8rem] md:px-10 md:text-[2.5rem] leading-[3.5rem] lg:leading-[5rem] xl:leading-[5rem] lg:text-[3.4rem] xl:text-6xl sm:py-6 lg:py-12 lg:pr-0 lg:pl-12 xl:pl-16 text-center lg:text-left">Les massages de Pauline</h1>
+    <h1 class="font-bold font-charmonman text-paradiso-500 py-4 px-4 text-[1.8rem] md:px-10 md:text-[2.5rem] leading-[3.5rem] lg:leading-[5rem] xl:leading-[5rem] lg:text-[3.4rem] xl:text-6xl sm:py-6 lg:py-12 lg:pr-0 lg:pl-12 xl:pl-16 text-center lg:text-left">Les massages de Pauline</h1>
     <div class="relative w-fit lg:w-full">
     <%= cl_image_tag @home.home_secondary_photo.key, crop: :fill, class: "md:hidden" %>
       <%= cl_image_tag @home.home_primary_photo.key, crop: :fill, class: "hidden md:block lg:h-auto lg:w-4/5" %>
@@ -15,7 +15,7 @@
       <div class="hidden lg:block box-border absolute w-40 h-40 -right-16 -top-16 border-2 border-yellow-400 transform rotate-45"></div>
     </div>
     <div class="w-full lg:w-11/12 px-10 md:px-20 py-8 text-left md:py-16 lg:px-0">
-      <h2 class="font-bold font-charmonman text-primaryGreen text-[1.4rem] md:text-[1.6rem] md:text-3xl lg:text-3xl"><%= @title %></h2>
+      <h2 class="font-bold font-charmonman text-paradiso-500 text-[1.4rem] md:text-[1.6rem] md:text-3xl lg:text-3xl"><%= @title %></h2>
       <p class="font-comfortaa text-[0.8rem] md:text-base text-titleGray pt-6"><%= @description %></p>
     </div>
   </div>
