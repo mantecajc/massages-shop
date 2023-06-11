@@ -15,7 +15,7 @@
       %>
       <p class="mt-2 text-center text-sm text-gray-600">
         Or <%= link_to "sign up", new_registration_path(resource_name), class:
-        "font-medium text-indigo-600 hover:text-indigo-500" %>
+        "font-medium text-paradiso-600 hover:text-paradiso-500" %>
       </p>
       <% end %>
     </div>
@@ -44,9 +44,7 @@
         </div>
       </div>
       <% if devise_mapping.rememberable? %>
-      <%# TODO: cambiar colores %>
       <%# TODO: Añadir banda en la parte superior para indicar que está conectada en modo admin y con el botón de logout %>
-      <%# Bloquear el signup %>
       <div class="flex items-center justify-between">
         <div class="field flex items-center">
           <%= f.check_box :remember_me, class: "h-4 w-4 text-paradiso-600
