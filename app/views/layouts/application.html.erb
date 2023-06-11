@@ -33,7 +33,10 @@
         </ul>
       </div>
     </nav>
-      
+    
+    <% if user_signed_in? %>
+    <%= render "shared/admin_banner" %>
+    <% end %>
     <div class="bg-snow-drift-500 pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
       <%= yield %>
     </div>
