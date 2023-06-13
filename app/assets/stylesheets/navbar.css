@@ -1,0 +1,15 @@
+/* Burger menu btn */
+#toggle span{
+  transform-origin: 5px 0px;
+}
+.close span{
+  background-color: white;
+  transform: rotate(45deg) translate(1px, -1px);
+}
+.close span:nth-child(2){
+  display: none;
+}
+.close span:nth-child(3){
+  background-color: white;
+  transform: rotate(-45deg) translate(0px, 0px);
+}
