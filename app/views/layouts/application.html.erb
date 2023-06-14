@@ -32,10 +32,28 @@
         </ul>
       </div>
     </nav>
-      
+
     <div class="bg-primaryBg pt-0 md:px-0 lg:px-28 lg:py-9 xl:px-40 xl:py-5">
       <%= yield %>
     </div>
 
+    <footer class="footer">
+      <div>
+        <img src="<%= asset_path 'logoblack.svg' %>" alt="logo">
+      </div>
+      <div>
+        <h3>ADRESSE</h3>
+        <p>13 Avenue Yolande d'Aragon</p>
+        <p>(Front de Maine)</p>
+        <p>49100 Angers</p>
+        <p>02 41 23 17 64</p>
+      </div>
+      <div>
+        <h3>HORAIRES D'OUVERTURE</h3>
+        <p>Du lundi au vendredi de 9h30 à 19h</p>
+        <p>Le samedi de 9h a 14h</p>
+        <p>Nocturne le jeudi jusqu'à 21h</p>
+      </div>
+    </footer>
   </body>
 </html>
