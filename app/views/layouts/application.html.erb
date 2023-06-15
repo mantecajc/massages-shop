@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500&family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/65fb5af6ee.js" crossorigin="anonymous"></script>
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
@@ -37,22 +37,22 @@
       <%= yield %>
     </div>
 
-    <footer class="footer font-comforta h-[80px] md:h-[100px]">
-      <div>
-        <img src="<%= asset_path 'logoblack.svg' %>" alt="logo" class="w-[80px] h-[80px] md:w-[100px] md:h-[100px]">
+    <footer class="footer font-inter flex-col py-10 px-[2.5rem] md:h-[150px] md:flex-row md:px-[10rem] lg:px-[7rem]">
+      <div class="md:flex md:items-center">
+        <img src="<%= asset_path 'logoblack.svg' %>" alt="logo" class="w-[80px] h-[80px] md:w-[120px] md:h-[120px]">
       </div>
-      <div class="leading-none text-[8px] w-[80px] pt-[12px] md:text-[13px] md:w-auto md:pt-[15px]">
-        <h3 class="pb-[6px] font-semibold">ADRESSE</h3>
-        <p>13 Avenue Yolande d'Aragon</p>
-        <p>(Front de Maine)</p>
-        <p>49100 Angers</p>
-        <p>02 41 23 17 64</p>
+      <div class="leading-4 text-[11px] pt-[12px] md:text-[12px] md:w-auto md:pt-[28px]">
+        <h3 class="pb-[6px] font-bold">ADRESSE</h3>
+        <p class="font-medium">13 Avenue Yolande d'Aragon</p>
+        <p class="font-medium">(Front de Maine)</p>
+        <p class="font-medium">49100 Angers</p>
+        <p class="font-medium">02 41 23 17 64</p>
       </div>
-      <div class="leading-none text-[8px] w-[110px] pt-[12px] md:text-[13px] md:w-auto md:pt-[15px]">
-        <h3 class="pb-[6px] font-semibold">HORAIRES D'OUVERTURE</h3>
-        <p>Du lundi au vendredi de 9h30 à 19h</p>
-        <p>Le samedi de 9h a 14h</p>
-        <p>Nocturne le jeudi jusqu'à 21h</p>
+      <div class="leading-4 text-[11px] pt-[12px] md:text-[12px] md:w-auto md:pt-[28px]">
+        <h3 class="pb-[6px] font-bold">HORAIRES D'OUVERTURE</h3>
+        <p class="font-medium">Du lundi au vendredi de 9h30 à 19h</p>
+        <p class="font-medium">Le samedi de 9h a 14h</p>
+        <p class="font-medium">Nocturne le jeudi jusqu'à 21h</p>
       </div>
     </footer>
   </body>
