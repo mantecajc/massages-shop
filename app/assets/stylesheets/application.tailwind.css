@@ -15,9 +15,7 @@
 @layer components {
   .footer {
     background: #F0C9BE;
-    height: 120px;
     display:flex;
     justify-content: space-around;
-    padding: 10px 0px;
   }
 }
