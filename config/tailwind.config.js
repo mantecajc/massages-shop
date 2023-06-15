@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         'charmonman': ['Charmonman', 'cursive'],
         'comfortaa': ['Comfortaa'],
+        'inter': ['Inter'],
       },
       colors: {
         primaryGreen: '#347E7F',
