@@ -18,6 +18,7 @@ module.exports = {
       colors: {
         titleGray: '#2D2E36',
         footerBg: '#F0C9BE',
+        primaryBg: '#FBFBF7',
         'snow-drift': {
           '50': '#FFFFFF',
           '100': '#FFFFFF',
