@@ -18,6 +18,7 @@ module.exports = {
         primaryGreen: '#347E7F',
         titleGray: '#2D2E36',
         primaryBg: '#FBFBF7',
+        footerBg: '#F0C9BE',
       },
     },
   },
