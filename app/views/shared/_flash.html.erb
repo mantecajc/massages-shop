@@ -1,0 +1,7 @@
+<% flash.each do |flash_type, message| %>
+  <% if flash_type == "notice" %>
+    <%= message %>
+  <% elsif flash_type == "alert" %>
+    <%= message %>
+  <% end %>
+<% end %>
