@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'home#index'
+  resources :home, only: [:index, :edit, :update]
   get 'pages/additional_info'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end
