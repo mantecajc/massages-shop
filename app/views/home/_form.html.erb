@@ -1,0 +1,38 @@
+<%= form_with(model: home, class: "contents") do |form| %>
+  <% if home.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited from being saved:</h2>
+
+      <ul>
+        <% home.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mt-5">
+    <%= form.label :title, class: "block mb-2 text-sm font-medium text-gray-900" do %>Titre<% end %>
+    <%= form.text_field :title, placeholder: "Qui suis-je en quelques mots ?", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :description, class: "block mb-2 text-sm font-medium text-gray-900" %>
+    <%= form.text_area :description, rows: 6, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+   <div class="mt-5">
+    <%= form.label :primary_photo, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Photo principale <span class="opacity-50 italic text-xs font-normal">Format portrait conseillé</span><% end %>
+    <%= form.file_field :primary_photo, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :secondary_photo, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Photo secondaire <span class="opacity-50 italic text-xs font-normal">Format paysage conseillé</span><% end %>
+    <%= form.file_field :secondary_photo, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="flex my-4">
+    <%= form.submit "Sauvegarder", class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer" %>
+    <%= button_tag "Annuler", data: { action: "turbo-modal#hideModal" }, type: "button", class: "text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center ml-2" %>
+  </div>
+<% end %>
