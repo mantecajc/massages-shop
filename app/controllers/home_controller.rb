@@ -11,17 +11,15 @@ class HomeController < ApplicationController
     @home = Home.find(params[:id])
   end
 
+  # Tutorial:
+  # https://www.bearer.com/blog/how-to-build-modals-with-hotwire-turbo-frames-stimulusjs
   def update
     @home = Home.find(params[:id])
 
-    respond_to do |format|
-      if @home.update(home_params)
-        format.html { redirect_to post_url(@home), notice: "Home page was successfully updated." }
-        format.json { render :index, status: :ok }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @home.errors, status: :unprocessable_entity }
-      end
+    if @home.update(home_params)
+      redirect_to root_path, notice: "Model was successfully updated."
+    else
+      render :edit
     end
   end
 
