@@ -17,7 +17,7 @@ class HomeController < ApplicationController
     @home = Home.find(params[:id])
 
     if @home.update(home_params)
-      redirect_to root_path, notice: "Model was successfully updated."
+      redirect_to home_index_path, notice: "Model was successfully updated."
     else
       render :edit
     end
