@@ -1,5 +1,7 @@
 <% flash.each do |flash_type, message| %>
-  <div class="flash__message">
+  <% if flash_type == "notice" %>
     <%= message %>
-  </div>
+  <% elsif flash_type == "alert" %>
+    <%= message %>
+  <% end %>
 <% end %>
