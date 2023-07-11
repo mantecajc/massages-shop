@@ -1,6 +1,6 @@
-<nav id="main-navbar" class="flex items-center h-16 md:h-24 justify-end bg-snow-drift-500">
+<nav id="main-navbar" class="flex justify-between items-center h-16 md:h-[8.6rem] justify-end bg-snow-drift-500">
   <%= link_to root_path, data: { turbo: false } do %>
-    <img src="<%= asset_path 'logo.svg' %>" alt="logo" class="absolute top-0 md:-top-[0.3rem] left-8 md:left-20 lg:left-32 xl:left-44 w-[70px] h-[70px] md:w-[150px] md:h-[150px]">
+    <img src="<%= asset_path 'logo.svg' %>" alt="logo" class="pl-8 md:pl-16 xl:pl-40 h-[70px] md:h-[150px]">
   <% end %>
   <div class="hidden md:flex w-2/3 lg:w-1/2 justify-around mr-8 lg:mr-24 xl:mr-36 md:text-paradiso-500 text-[1.07rem] font-comfortaa">
     <a href="#" class="relative group">Les massages<span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[188px] h-[52px] -left-[30px] -top-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-400"></span></a>
