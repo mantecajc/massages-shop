@@ -1,2 +1,2 @@
 <%= turbo_stream.replace('home_body', partial: "home/home_body", locals: { home: @home }) %>
-<%= flash.now[:notice] = "La page d'accueil a été mise à jour avec succès." %>
+<%= turbo_stream.prepend "flash", partial: "shared/flash" %>

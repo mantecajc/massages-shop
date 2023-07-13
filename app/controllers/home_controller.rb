@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       if @home.update(home_params)
-        format.turbo_stream
+        format.turbo_stream { flash.now[:success] = "La page d'accueil a été mise à jour avec succès." }
         format.html { redirect_to home_index_path, notice: "La page d'accueil a été mise à jour avec succès." }
       else
         format.html { render :edit, status: :unprocessable_entity }

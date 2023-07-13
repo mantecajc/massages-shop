@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import NotificationController from "./notification_controller"
+application.register("notification", NotificationController)
+
 import TurboModalController from "./turbo_modal_controller"
 application.register("turbo-modal", TurboModalController)
