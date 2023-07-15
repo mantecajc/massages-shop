@@ -1,0 +1,44 @@
+<div id="massage" class="h-full">
+  <div  class="lg:flex h-full" id="<%= dom_id massage %>">
+    <div class="w-full min-h-[18rem] bg-no-repeat bg-cover flex justify-center flex-col pt-16 lg:w-1/2" style="background-image: url('<%= massage.photo.url %>');">
+      <div class="flex flex-col items-center justify-center text-white font-bold font-charmonman text-[2.5rem] lg:text-[4rem] w-full">
+        <div class="relative mb-2">
+          <div class="box-border w-8 h-8 lg:w-12 lg:h-12 border-[1.5px] border-white transform rotate-45"></div>
+        </div>
+        <%= massage.title %>
+      </div>
+    </div>
+
+    <div class="flex flex-col px-10 py-8 lg:w-1/2 lg:px-20">
+      <div class="flex flex-col">
+        <% if user_signed_in? %>
+          <div class="mb-8">
+            <%= link_to "Editer", edit_massage_path(@massage), data: { turbo_frame: "modal" }, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" %>
+            <%= link_to 'Supprimer', massage_path(@massage), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: "text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-2" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="font-bold font-charmonman text-paradiso-500 text-[1.5rem] md:text-[1.6rem] md:text-3xl lg:text-3xl"><%= massage.subtitle %></div>
+
+      <div class="font-comfortaa text-[15px] text-titleGray">
+        <div class="flex justify-between my-6 sm:flex-col lg:flex-row lg:justify-start">
+          <div class="sm:mb-4 lg:mb-0 lg:mr-8">Durée : <%= massage.duration %> min</div>
+          <div>Tarif : <%= pluralize(massage.price, "euro") %></div>
+        </div>
+
+        <p>
+          <%= massage.large_description %>
+        </p>
+      </div>
+
+      <div class="flex flex-col items-start justify-between lg:h-full">
+        <%= link_to "Offrir ce soin", '#', class: "font-comfortaa text-[15px] text-white w-fit whitespace-nowrap flex justify-center py-4 px-10 my-8 bg-paradiso-500 hover:bg-paradiso-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ripe-lemon-500 h-fit" %>
+
+        <%= link_to massages_path(filter: @massage.category.page), class: "flex justify-end w-full items-center font-comfortaa text-paradiso-500 hover:text-paradiso-600 text-[14px]" do %>
+        <i class="fas fa-arrow-circle-left mr-2"></i>Retour
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div id="massages_body" class="flex flex-col bg-snow-drift-500 items-center">
+  <% categories.each do |category| %>
+		<div class="w-full min-h-[12rem] lg:h-[18rem] bg-no-repeat bg-cover flex justify-center flex-col p-6 lg:p-[5%] lg:pb-[3%] lg:justify-end" style="background-image: url('<%= category.photo.url %>');">
+			<div class="flex justify-begin text-white font-bold font-charmonman text-[2.1rem] md:text-[2.5rem] lg:text-[3rem] w-full lg:py-[1.5rem] lg:px-14">
+				<%= category.title %>
+			</div>
+			<% if user_signed_in? %>
+			<div class="hidden md:flex">
+				<%= link_to "Editer", edit_category_path(category), data: { turbo_frame: "modal" }, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" %>
+				<%= link_to "Supprimer", category, data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ? Cela supprimera tous les articles associés." }, class: "text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center ml-2" %>
+				<%= link_to 'Ajouter un massage', new_massage_path(category_id: category), data: { turbo_frame: "modal" }, class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-2" %>
+			</div>
+			<% end %>
+		</div>
+		<div class="flex flex-col bg-white w-[90%] my-[-1.5rem] z-10 px-6 lg:px-14">
+			<% category.massages.each_with_index do |massage, i| %>
+			<div class="flex flex-col bg-white w-full py-4 lg:flex-row lg:py-12 lg:min-h-[14rem]">
+				<div class="font-bold font-charmonman text-[2rem] md:text-[2.5rem] lg:text-[2.6rem] text-footerBg mb-4 lg:mb-0 lg:min-w-[30%] xl:min-w-[26%] lg:flex lg:items-center overflow-hidden">
+					<%= massage.title %>
+				</div>
+				<div class="font-comfortaa text-[15px] text-titleGray lg:ml-8 lg:mr-16">
+					<div class="mb-4 lg:flex">
+						<p>Durée : <%= massage.duration %>	min</p>
+						<p class="lg:ml-4">Tarif : <%= pluralize(massage.price, "euro") %></p>
+					</div>
+					<p class="my-1.5">
+						Résumé : <%= massage.brief_description %>
+					</p>
+				</div>
+				<div class="flex lg:items-end">
+					<%= link_to "Plus de détails", massage_path(massage), class: "font-comfortaa text-[15px] text-white w-fit whitespace-nowrap flex justify-center py-4 px-10 mb-4 mt-4 bg-paradiso-500 hover:bg-paradiso-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ripe-lemon-500 h-fit" %>
+				</div>
+			</div>
+			<% unless i == category.massages.size - 1 %>
+			<hr>
+			<% end %>
+			<% end %>
+		</div>
+	<% end %>
+</div>

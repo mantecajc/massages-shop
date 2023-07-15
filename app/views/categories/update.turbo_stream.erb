@@ -1,0 +1,2 @@
+<%= turbo_stream.replace('massages_body', partial: "massages/massages_body", locals: { categories: @categories }) %>
+<%= turbo_stream.prepend "flash", partial: "shared/flash" %>

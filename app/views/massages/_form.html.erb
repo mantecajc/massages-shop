@@ -1,0 +1,55 @@
+<%= form_with(model: massage, class: "contents") do |form| %>
+  <% if massage.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(massage.errors.count, "error") %> prohibited this massage from being saved:</h2>
+
+      <ul>
+        <% massage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :category_id, value: category.id %>
+
+  <div class="mt-5">
+    <%= form.label :title, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Titre <span class="opacity-50 italic text-xs font-normal">Recommandé : noms ne dépassant pas 11 caractères.</span><% end %>
+    <%= form.text_field :title, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :subtitle, class: "block mb-2 text-sm font-medium text-gray-900" do %>Sous-titre<% end %>
+    <%= form.text_field :subtitle, placeholder: "", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :duration, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Duration <span class="opacity-50 italic text-xs font-normal">En minutes</span><% end %>
+    <%= form.number_field :duration, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5", min: 0, step: 1 %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :price, class: "block mb-2 text-sm font-medium text-gray-900" do %>Prix<% end %>
+    <%= form.number_field :price, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5", min: 0, step: "0.01" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :brief_description, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Résumé <span class="opacity-50 italic text-xs font-normal">Recommandé : entre 100 et 180 caractères.</span><% end %>
+    <%= form.text_area :brief_description, rows: 4, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :large_description, class: "block mb-2 text-sm font-medium text-gray-900" do %>Description détaillée<% end %>
+    <%= form.text_area :large_description, rows: 4, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="mt-5">
+    <%= form.label :photo, class: "flex justify-between block mb-2 text-sm font-medium text-gray-900" do %>Photo <span class="opacity-50 italic text-xs font-normal">Format paysage conseillé</span><% end %>
+    <%= form.file_field :photo, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" %>
+  </div>
+
+  <div class="flex my-4">
+    <%= form.submit "Sauvegarder", class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer" %>
+    <%= button_tag "Annuler", data: { action: "turbo-modal#hideModal" }, type: "button", class: "text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center ml-2" %>
+  </div>
+<% end %>
