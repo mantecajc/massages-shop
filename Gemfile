@@ -72,6 +72,7 @@ group :development do
 
   gem 'solargraph', '~> 0.49.0'
   gem 'rubocop', '~> 1.56'
+  gem 'hotwire-livereload', '~> 1.2', '>= 1.2.3'
 end
 
 group :test do
