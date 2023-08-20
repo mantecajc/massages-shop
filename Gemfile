@@ -46,7 +46,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'cloudinary', '~> 1.25'
-gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -58,6 +57,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'byebug', '~> 11.1', '>= 11.1.3'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -69,6 +69,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'solargraph', '~> 0.49.0'
+  gem 'rubocop', '~> 1.56'
 end
 
 group :test do
