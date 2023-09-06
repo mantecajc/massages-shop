@@ -9,3 +9,6 @@ application.register("notification", NotificationController)
 
 import TurboModalController from "./turbo_modal_controller"
 application.register("turbo-modal", TurboModalController)
+
+import SidebarController from "./sidebar_controller"
+application.register("sidebar", SidebarController)

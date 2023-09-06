@@ -19,8 +19,10 @@
 
   <body>
     <% unless devise_controller? && action_name == "new" %>
+    <div data-controller="sidebar">
       <%= render "shared/navbar" %>
       <%= render "shared/navbar_mobile" %>
+    </div>
     <% end %>
 
     <div id="flash" class="flash">
