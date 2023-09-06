@@ -72,4 +72,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.hotwire_livereload.listen_paths << Rails.root.join("app/assets/builds")
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
 end

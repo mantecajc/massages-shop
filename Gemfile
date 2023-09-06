@@ -47,6 +47,10 @@ gem "bootsnap", require: false
 
 gem 'cloudinary', '~> 1.25'
 
+# Gemfile
+gem 'mailjet', '~> 1.7', '>= 1.7.3'
+
+gem 'geocoder', '~> 1.8', '>= 1.8.2'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -69,6 +73,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 
   gem 'solargraph', '~> 0.49.0'
   gem 'rubocop', '~> 1.56'

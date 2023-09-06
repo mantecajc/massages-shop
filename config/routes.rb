@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :massages
-  resources :home, only: [:index, :edit, :update]
-  resources :categories, except: [:index, :show]
+  resources :home, only: %i[index edit update]
+  resources :info, only: %i[index edit update]
+  resources :categories, except: %i[index show]
 
-  get 'pages/additional_info'
+  post 'contact', to: 'info#contact', as: 'contact'
 end
