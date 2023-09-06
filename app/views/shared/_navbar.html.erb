@@ -13,7 +13,10 @@
       Offres du moment
       <span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[200px] h-[52px] -left-[24px] -top-[14px] group-hover:opacity-100 transition-opacity duration-400 <%= offers_page? ? 'opacity-100' : 'opacity-0' %>"></span>
     <% end %>
-    <a href="#" class="relative group">Infos pratiques<span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[156px] h-[52px] -left-[13px] -top-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-400"></span></a>
+    <%= link_to info_index_path, data: { turbo: false }, class: "relative group" do %>
+      Infos pratiques
+      <span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[156px] h-[52px] -left-[13px] -top-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-400"></span>
+    <% end %>
   </div>
   <div id="toggle" class="flex md:hidden flex-col items-center align-middle cursor-pointer z-30 mr-8">
     <span class="bg-paradiso-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
