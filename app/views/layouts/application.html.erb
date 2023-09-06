@@ -18,9 +18,15 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render "shared/admin_banner" %>
+    <% end %>
+
     <% unless devise_controller? && action_name == "new" %>
+    <div data-controller="sidebar">
       <%= render "shared/navbar" %>
       <%= render "shared/navbar_mobile" %>
+    </div>
     <% end %>
 
     <div id="flash" class="flash">
@@ -28,10 +34,6 @@
     </div>
 
     <%= turbo_frame_tag "modal" %>
-
-    <% if user_signed_in? %>
-      <%= render "shared/admin_banner" %>
-    <% end %>
 
     <div class="h-screen bg-snow-drift-500 py-0 px-0 ">
       <%= yield %>
