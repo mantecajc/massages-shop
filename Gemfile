@@ -47,6 +47,7 @@ gem "bootsnap", require: false
 
 gem 'cloudinary', '~> 1.25'
 
+gem 'geocoder', '~> 1.8', '>= 1.8.2'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
