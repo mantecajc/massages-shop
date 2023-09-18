@@ -2,11 +2,15 @@ class InfoController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
 
   def index
-    @marker = [
-      {
-        lat: 48.8649574,
-        lng: 2.3800617
-      }
-    ]
+    # address = "9 Rue du Tabuteau, 49370 Saint-Clément-de-la-Place"
+    # coordinates = Geocoder.coordinates(address)
+    # if coordinates.present?
+    # lat = coordinates[0]
+    # lng = coordinates[1]
+    @marker = [{
+      lat: 47.5245343,
+      lng: -0.7441239
+    }]
+    # end
   end
 end

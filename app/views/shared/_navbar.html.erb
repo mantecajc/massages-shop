@@ -15,7 +15,7 @@
     <% end %>
     <%= link_to info_index_path, data: { turbo: false }, class: "relative group" do %>
       Infos pratiques
-      <span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[156px] h-[52px] -left-[13px] -top-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-400"></span>
+      <span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[156px] h-[52px] -left-[13px] -top-[14px] opacity-0 group-hover:opacity-100 transition-opacity duration-400 <%= controller_name == 'info' ? 'opacity-100' : 'opacity-0' %>"></span>
     <% end %>
   </div>
   <div id="toggle" class="flex md:hidden flex-col items-center align-middle cursor-pointer z-30 mr-8">

@@ -1,6 +1,7 @@
-<!-- <h4>Infos pratiques</h4> -->
-<h4>Infos pratiques</h4>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @marker.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="flex w-full h-full">
+  <div class="w-[50%]">hello</div>
+  <div class="w-[50%] h-[100%]"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
