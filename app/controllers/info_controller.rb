@@ -9,7 +9,8 @@ class InfoController < ApplicationController
     # lng = coordinates[1]
     @marker = [{
       lat: 47.5245343,
-      lng: -0.7441239
+      lng: -0.7441239,
+      info_window_html: render_to_string(partial: 'info_window')
     }]
     # end
   end
