@@ -33,8 +33,14 @@ export default class extends Controller {
   }
 
   #fitMapToMarkers() {
+    let centerView = 0
+    if (window.innerWidth <= 1023) {
+      centerView = 0.0018
+    } else {
+      centerView = 0
+    }
     const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat + centerView ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 }
