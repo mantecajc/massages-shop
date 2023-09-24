@@ -1,5 +1,5 @@
 class InfoController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index]
+  skip_before_action :authenticate_user!, only: %i[index contact]
 
   def index
     @marker = [{
