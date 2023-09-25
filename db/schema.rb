@@ -69,6 +69,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_184849) do
     t.index ["category_id"], name: "index_massages_on_category_id"
   end
 
+  create_table "pages_contents", force: :cascade do |t|
+    t.string "home_title"
+    t.text "home_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
