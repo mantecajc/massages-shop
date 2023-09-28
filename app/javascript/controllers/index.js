@@ -15,3 +15,6 @@ application.register("sidebar", SidebarController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import ContactFormController from "./contact_form_controller"
+application.register("contact_form", ContactFormController)
