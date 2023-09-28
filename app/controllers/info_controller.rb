@@ -10,6 +10,6 @@ class InfoController < ApplicationController
   end
 
   def contact
-    UserMailer.contact_email(@user).deliver_now
+    UserMailer.contact_email(params[:name], params[:email], params[:subject], params[:message]).deliver_now
   end
 end
