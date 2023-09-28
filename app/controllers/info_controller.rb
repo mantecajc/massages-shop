@@ -2,6 +2,7 @@ class InfoController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index contact]
 
   def index
+    @content = Info.first.try(:content) || ''
     @marker = [{
       lat: 47.5245343,
       lng: -0.7441239,
