@@ -12,9 +12,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/65fb5af6ee.js" crossorigin="anonymous"></script>
     <%= hotwire_livereload_tags if Rails.env.development? %>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
   </head>
 
   <body>
@@ -35,7 +36,7 @@
 
     <%= turbo_frame_tag "modal" %>
 
-    <div class="h-screen bg-snow-drift-500 py-0 px-0 ">
+    <div class="h-full lg:h-screen bg-snow-drift-500 py-0 px-0 ">
       <%= yield %>
     </div>
   </body>

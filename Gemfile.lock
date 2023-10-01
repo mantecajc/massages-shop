@@ -113,6 +113,7 @@ GEM
     e2mmap (0.1.0)
     erubi (1.12.0)
     ffi (1.15.5)
+    geocoder (1.8.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     hotwire-livereload (1.2.3)
@@ -139,6 +140,10 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -150,6 +155,10 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailjet (1.7.3)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client (>= 2.0.0)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -332,9 +341,12 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   dotenv-rails
+  geocoder (~> 1.8, >= 1.8.2)
   hotwire-livereload (~> 1.2, >= 1.2.3)
   importmap-rails
   jbuilder
+  letter_opener (~> 1.8, >= 1.8.1)
+  mailjet (~> 1.7, >= 1.7.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)

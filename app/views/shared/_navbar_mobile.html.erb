@@ -12,11 +12,13 @@
 		</li>
 		<li class="relative flex justify-between w-4/5 border-b-[0.5px]">
       <%= link_to massages_path(filter: "offers"), data: { turbo: false }, class: "block py-4 w-full" do %>
-			  Offres du moment
+				Offres du moment
       <% end %>
 		</li>
 		<li class="relative flex justify-between w-4/5 border-b-[0.5px]">
-			<a href="#" class="block py-4 w-full" aria-current="true">Infos pratiques</a>
+			<%= link_to info_index_path, data: { turbo: false }, class: "block py-4 w-full" do %>
+				Infos pratiques
+			<% end %>
 		</li>
 	</ul>
 </nav>

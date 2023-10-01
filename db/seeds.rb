@@ -9,6 +9,7 @@ unless Home.first.nil?
   Category.all.each { |category| category.photo.purge }
   Massage.all.each { |massage| massage.photo.purge }
   Category.destroy_all
+  Info.destroy_all
 end
 
 User.destroy_all
@@ -55,5 +56,9 @@ puts "Home created"
     puts "Massage created"
   end
 end
+
+Info.create!(
+  content: "Une question sur l'un de nos soins ? Vérifiez nos disponibilités ? Vous voulez nous faire part de vos commentaires ? Nous sommes à votre écoute ! Ouvert du lundi au samedi de 9h à 19h."
+)
 
 puts 'Done ✨'
