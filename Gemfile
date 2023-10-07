@@ -47,10 +47,12 @@ gem "bootsnap", require: false
 
 gem 'cloudinary', '~> 1.25'
 
-# Gemfile
 gem 'mailjet', '~> 1.7', '>= 1.7.3'
 
 gem 'geocoder', '~> 1.8', '>= 1.8.2'
+
+gem 'stripe', '~> 9.3'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -75,7 +77,6 @@ group :development do
   # gem "spring"
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 
-  gem 'solargraph', '~> 0.49.0'
   gem 'rubocop', '~> 1.56'
   gem 'hotwire-livereload', '~> 1.2', '>= 1.2.3'
 end
