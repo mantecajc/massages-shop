@@ -1,8 +1,13 @@
-// TODO: to complete
 {
   "recommendations": [
     "kaiwood.endwise",
     "ninoseki.vscode-gem-lens",
-    "castwide.solargraph"
+    "formulahendry.auto-rename-tag",
+    "zneuray.erb-vscode-snippets",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "rebornix.ruby",
+    "ms-vscode.sublime-keybindings",
+    "wingrunr21.vscode-ruby"
   ]
 }

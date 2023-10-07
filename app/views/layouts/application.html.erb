@@ -6,7 +6,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
@@ -14,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/65fb5af6ee.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <%= hotwire_livereload_tags if Rails.env.development? %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
   </head>
@@ -23,7 +23,7 @@
       <%= render "shared/admin_banner" %>
     <% end %>
 
-    <% unless devise_controller? && action_name == "new" %>
+    <% unless (devise_controller? && action_name == "new") || (action_name == "new" && controller_name == "payments") %>
     <div data-controller="sidebar">
       <%= render "shared/navbar" %>
       <%= render "shared/navbar_mobile" %>

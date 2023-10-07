@@ -11,6 +11,7 @@ class InfoController < ApplicationController
   end
 
   def contact
+    # TODO PROD: check that deliver_now works.
     UserMailer.contact_email(
       params[:name],
       params[:email],

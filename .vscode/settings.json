@@ -2,19 +2,12 @@
 	"window.zoomLevel": 1,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
 	"editor.wordWrap": "on",
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.tabSize": 2,
-	// https://dev.to/vvo/the-three-extensions-you-need-for-rails-in-vs-code-5h7j
-	// The config below brokes ERB-VSCode-Snippets
-	// "files.associations": {
-	// 		"*.html.erb": "html"
-	// },
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"solargraph.autoformat": true,
-	"solargraph.diagnostics": true,
-	"solargraph.formatting": true,
-	"files.insertFinalNewline": true
+	"emmet.includeLanguages": {"erb": "html"},
+	// TO CHECK:
+	"gitlens.rebaseEditor.ordering": "asc",
+	"gitlens.views.searchAndCompare.files.layout": "list",
 }

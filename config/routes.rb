@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root "home#index"
   devise_for :users
 
   resources :massages
@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :info, only: %i[index edit update]
   resources :categories, except: %i[index show]
 
-  post 'contact', to: 'info#contact', as: 'contact'
+  post "contact", to: "info#contact", as: "contact"
+  get "/new_payment", to: "payments#new"
+  get "/checkout", to: "payments#checkout"
 end
