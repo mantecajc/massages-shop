@@ -1,22 +1,22 @@
 <%# TODO: reemplazar el text-[15px] por una talla más pequeña. Crear un config. %>
-<footer class="flex justify-between text-center font-inter bg-footerBg flex-col py-10 px-10 text-[14px] lg:flex-row lg:justify-around">
-  <div class="my-4">
-    <h3 class="mb-2 font-bold">Adresse</h3>
-    <%= link_to "https://www.google.com/maps?q=9+Rue+du+Tabuteau,49370+Saint-Clément-de-la-Place", target:"_blank", class: "" do  %>
+<footer class="flex justify-between text-center font-inter bg-footerBg flex-col py-10 px-10 text-[14px] lg:flex-row lg:px-40">
+  <div class="my-8 lg:my-4 lg:min-w-[14rem]">
+    <h3 class="mb-4 lg:mb-2 font-bold flex justify-center items-center"><i class="fas fa-biking text-[18px] mr-2"></i><%= "Adresse" %></h3>
+    <%= link_to "https://www.google.com/maps?q=9+Rue+du+Tabuteau,49370+Saint-Clément-de-la-Place", target:"_blank", class: "hover:underline" do  %>
       <p class="">9 Rue du Tabuteau</p>
       <p class="">49370 Saint-Clément-de-la-Place</p>
     <% end %>
-    <p class="">06 70 08 20 61</p>
+    <p class="mt-2">06 70 08 20 61</p>
   </div>
-  <div class="my-4">
-    <h3 class="mb-2 font-bold">Horaires d'ouverture</h3>
+  <div class="my-8 lg:my-4 lg:min-w-[14rem]">
+    <h3 class="mb-4 lg:mb-2 font-bold flex justify-center items-center"><i class="far fa-clock text-[18px] mr-2"></i><%= " Horaires d'ouverture" %></h3>
     <p class="">Du lundi au samedi de 9h30 à 19h</p>
   </div>
-  <div class="my-4 text-4xl lg:flex lg:flex-col lg:justify-between">
-    <%= link_to "#", class: "" do %>
+  <div class="my-8 lg:my-4 lg:min-w-[14rem] text-4xl lg:flex lg:flex-col lg:justify-between lg:text-right lg:pr-8">
+    <%= link_to "#", class: "mx-2 lg:mx-0" do %>
       <i class="fab fa-facebook-square"></i>
     <% end %>
-    <%= link_to "#", class: "" do %>
+    <%= link_to "#", class: "mx-2 lg:mx-0" do %>
       <i class="fab fa-instagram"></i>
     <% end %>
   </div>

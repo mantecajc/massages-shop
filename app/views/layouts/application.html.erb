@@ -36,7 +36,7 @@
 
     <%= turbo_frame_tag "modal" %>
 
-    <div class="h-full bg-snow-drift-500 py-0 px-0 lg:pb-10 <%= 'xl:pb-[10rem]' if @current_action == "home.index"%>">
+    <div class="h-full bg-snow-drift-500 py-0 px-0 pb-10 <%= 'xl:pb-[10rem]' if @current_action == "home.index"%>">
       <%= yield %>
     </div>
 
