@@ -13,10 +13,12 @@ module.exports = {
       fontFamily: {
         'charmonman': ['Charmonman', 'cursive'],
         'comfortaa': ['Comfortaa'],
+        'inter': ['Inter'],
       },
       colors: {
         titleGray: '#2D2E36',
         footerBg: '#F0C9BE',
+        primaryBg: '#FBFBF7',
         'snow-drift': {
           '50': '#FFFFFF',
           '100': '#FFFFFF',
