@@ -1,6 +1,6 @@
 <%# TODO: reemplazar el text-[15px] por una talla más pequeña. Crear un config. %>
-<footer class="flex justify-between text-center font-inter bg-footerBg flex-col py-10 px-10 md:h-[150px] md:flex-row md:px-20 md:py-0 lg:px-28 xl:px-40 text-[14px]">
-  <div class="my-4 md:w-auto md:pt-8">
+<footer class="flex justify-between text-center font-inter bg-footerBg flex-col py-10 px-10 text-[14px] lg:flex-row lg:justify-around">
+  <div class="my-4">
     <h3 class="mb-2 font-bold">Adresse</h3>
     <%= link_to "https://www.google.com/maps?q=9+Rue+du+Tabuteau,49370+Saint-Clément-de-la-Place", target:"_blank", class: "" do  %>
       <p class="">9 Rue du Tabuteau</p>
@@ -8,11 +8,11 @@
     <% end %>
     <p class="">06 70 08 20 61</p>
   </div>
-  <div class="my-4 md:w-auto md:pt-8">
+  <div class="my-4">
     <h3 class="mb-2 font-bold">Horaires d'ouverture</h3>
     <p class="">Du lundi au samedi de 9h30 à 19h</p>
   </div>
-  <div class="my-4 text-4xl md:flex md:items-center">
+  <div class="my-4 text-4xl lg:flex lg:flex-col lg:justify-between">
     <%= link_to "#", class: "" do %>
       <i class="fab fa-facebook-square"></i>
     <% end %>
