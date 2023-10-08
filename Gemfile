@@ -53,6 +53,8 @@ gem 'geocoder', '~> 1.8', '>= 1.8.2'
 
 gem 'stripe', '~> 9.3'
 
+gem 'combine_pdf', '~> 1.0', '>= 1.0.24'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

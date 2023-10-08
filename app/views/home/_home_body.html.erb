@@ -5,8 +5,8 @@
         <img src="<%= asset_path 'logo.svg' %>" alt="logo" class="w-[76%]">
       </div>
     </div>
-    <div class="relative w-fit lg:w-full">
-      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "lg:hidden" %>
+    <div class="relative w-fit lg:w-full sm:flex sm:justify-center lg:justify-normal">
+      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "sm:w-2/3 lg:hidden" %>
       <%= cl_image_tag home.try(:primary_photo).key, crop: :fill, class: "hidden lg:block lg:h-auto lg:w-4/5" %>
       <div class="box-border absolute -top-12 w-20 h-20 md:w-28 md:h-28 -left-10 lg:w-32 lg:h-32 lg:-left-16 lg:top-12 border-2 border-yellow-400 transform rotate-45"></div>
       <div class="box-border absolute w-24 h-24 lg:w-32 lg:h-32 -right-10 -bottom-4 lg:right-[4.5rem] lg:-bottom-12 border-2 border-yellow-400 transform rotate-45"></div>
@@ -19,7 +19,7 @@
       <div class="hidden lg:block box-border absolute w-40 h-40 -right-16 -top-16 border-2 border-yellow-400 transform rotate-45"></div>
     </div>
     <div class="w-full lg:w-11/12 px-10 md:px-20 py-8 text-left md:py-16 lg:px-0">
-      <h2 class="font-bold font-charmonman text-paradiso-500 text-[1.5rem] md:text-[1.6rem] md:text-3xl lg:text-3xl"><%= home.try(:title) %></h2>
+      <h2 class="font-bold font-charmonman text-fun-green-500 text-[1.5rem] md:text-[1.6rem] md:text-3xl lg:text-3xl"><%= home.try(:title) %></h2>
       <p class="font-comfortaa text-[15px] text-titleGray pt-6"><%= home.try(:description) %></p>
     </div>
   </div>

@@ -1,3 +1,5 @@
+// Color shades generator: https://javisperez.github.io/tailwindcolorshades/
+
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -13,6 +15,7 @@ module.exports = {
       fontFamily: {
         'charmonman': ['Charmonman', 'cursive'],
         'comfortaa': ['Comfortaa'],
+        'inter': ['Inter'],
       },
       colors: {
         titleGray: '#2D2E36',
@@ -43,19 +46,19 @@ module.exports = {
           '900': '#694400',
           '950': '#422700'
         },
-        'paradiso': {
-          '50': '#F2FAFA',
-          '100': '#E4F2F2',
-          '200': '#BFE0E0',
-          '300': '#9BCBCC',
-          '400': '#62A5A6',
-          '500': '#347E7F',
-          '600': '#2A6E73',
-          '700': '#1D565E',
-          '800': '#13404D',
-          '900': '#0A2B38',
-          '950': '#041824'
-        }
+        'fun-green': {
+          '50': '#ebf7f4',
+          '100': '#daf0e9',
+          '200': '#a7d9c7',
+          '300': '#78bfa3',
+          '400': '#349164',
+          '500': '#08622f',
+          '600': '#065728',
+          '700': '#04471e',
+          '800': '#033b16',
+          '900': '#022b0f',
+          '950': '#011c08'
+        },
       },
     },
   },

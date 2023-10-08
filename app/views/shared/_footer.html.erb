@@ -1,0 +1,20 @@
+<footer class="flex justify-between text-center font-inter bg-footerBg flex-col py-10 px-10 text-[14px] lg:flex-row lg:px-40">
+  <div class="my-8 lg:my-4 lg:min-w-[14rem]">
+    <h3 class="mb-4 lg:mb-2 font-bold flex justify-center items-center"><i class="fas fa-home text-[18px] mr-2"></i><%= "Adresse" %></h3>
+    <%= link_to "https://www.google.com/maps?q=9+Rue+du+Tabuteau,49370+Saint-Clément-de-la-Place", target:"_blank", class: "hover:underline" do  %>
+      <p class="">9 Rue du Tabuteau</p>
+      <p class="">49370 Saint-Clément-de-la-Place</p>
+    <% end %>
+    <p class="mt-2">06 70 08 20 61</p>
+  </div>
+  <div class="my-8 lg:my-4 lg:min-w-[14rem]">
+    <h3 class="mb-4 lg:mb-2 font-bold flex justify-center items-center"><i class="far fa-clock text-[18px] mr-2"></i><%= " Horaires d'ouverture" %></h3>
+    <p class="">Du lundi au samedi de 9h30 à 19h</p>
+  </div>
+  <div class="my-8 lg:my-4 lg:min-w-[14rem]">
+    <h3 class="mb-4 lg:mb-2 font-bold flex justify-center items-center"><i class="fas fa-users text-[18px] mr-2"></i><%= " Sur les réseaux" %></h3>
+    <%= link_to "https://www.instagram.com/les_massages_de_pauline49/?igshid=NTc4MTIwNjQ2YQ%3D%3D", class: "mx-2 lg:mx-0 text-4xl", target: "_blank" do %>
+      <i class="fab fa-instagram"></i>
+    <% end %>
+  </div>
+</footer>

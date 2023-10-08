@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Comfortaa:wght@500;600;700;800;900&family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/65fb5af6ee.js" crossorigin="anonymous"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <%= hotwire_livereload_tags if Rails.env.development? %>
@@ -23,7 +23,7 @@
       <%= render "shared/admin_banner" %>
     <% end %>
 
-    <% unless (devise_controller? && action_name == "new") || (action_name == "new" && controller_name == "payments") %>
+    <% unless (devise_controller? && action_name == "new") || @current_action == "payments.new" %>
     <div data-controller="sidebar">
       <%= render "shared/navbar" %>
       <%= render "shared/navbar_mobile" %>
@@ -35,9 +35,14 @@
     </div>
 
     <%= turbo_frame_tag "modal" %>
-
-    <div class="h-full lg:h-screen bg-snow-drift-500 py-0 px-0 ">
+    <div class="h-full bg-snow-drift-500
+                <%= 'pb-10' unless ["massages.show", "info.index"].include?(@current_action) %>
+                <%= 'xl:pb-[10rem]' if @current_action == "home.index"%>">
       <%= yield %>
     </div>
+
+    <% unless (devise_controller? && action_name == "new") || @current_action == "payments.new" %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>

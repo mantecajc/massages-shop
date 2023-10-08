@@ -1,6 +1,6 @@
 <nav id="main-navbar" class="flex justify-between items-center h-16 md:h-[6rem] bg-snow-drift-500">
   <div></div>
-  <div class="hidden md:flex w-full lg:w-[60%] lg:ml-0 xl:w-1/2 justify-between mx-20 lg:mr-36 xl:mr-44 md:text-paradiso-500 text-4 lg:text-[16px] font-comfortaa">
+  <div class="hidden md:flex w-full lg:w-[60%] lg:ml-0 xl:w-1/2 justify-between mx-20 lg:mr-36 xl:mr-44 md:text-fun-green-500 text-4 lg:text-[16px] font-comfortaa">
     <%= link_to root_path, data: { turbo: false }, class: "relative group" do %>
       Accueil
       <span class="absolute border-2 border-solid border-footerBg rounded-[50%] w-[92px] h-[42px] -left-[15px] -top-[9px] opacity-0 group-hover:opacity-100 transition-opacity duration-400 <%= controller_name == 'home' ? 'opacity-100' : 'opacity-0' %>"></span>
@@ -19,8 +19,8 @@
     <% end %>
   </div>
   <div id="toggle" class="flex md:hidden flex-col items-center align-middle cursor-pointer z-30 mr-8">
-    <span class="bg-paradiso-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
-    <span class="bg-paradiso-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
-    <span class="bg-paradiso-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
+    <span class="bg-fun-green-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
+    <span class="bg-fun-green-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
+    <span class="bg-fun-green-500 mb-[5px] rounded-sm transition-all duration-200 ease-linear h-0.5 w-5"></span>
   </div>
 </nav>
