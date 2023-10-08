@@ -18,7 +18,7 @@ module.exports = {
       colors: {
         titleGray: '#2D2E36',
         footerBg: '#F0C9BE',
-        primaryBg: '#FBFBF7',
+        // footerBg: '#ffdede', // check with Pauline
         'snow-drift': {
           '50': '#FFFFFF',
           '100': '#FFFFFF',
@@ -52,6 +52,7 @@ module.exports = {
           '300': '#9BCBCC',
           '400': '#62A5A6',
           '500': '#347E7F',
+          // '500': '#08622F', // check with Pauline
           '600': '#2A6E73',
           '700': '#1D565E',
           '800': '#13404D',
