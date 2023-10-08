@@ -1,5 +1,5 @@
-<div id="contact-form" class="font-comfortaa text-[15px] text-titleGray px-10 lg:py-8 lg:px-10 xl:px-40">
-  <h2 class="mb-4 font-bold font-charmonman text-paradiso-500 text-[1.5rem] lg:text-[1.6rem] lg:text-3xl lg:text-3xl">Nous contacter</h2>
+<div id="contact-form" class="font-comfortaa text-[15px] text-titleGray px-10 lg:pt-8 lg:px-10 xl:px-40 mb-8">
+  <h2 class="mb-4 font-bold font-charmonman text-fun-green-500 text-[1.5rem] lg:text-[1.6rem] lg:text-3xl lg:text-3xl">Nous contacter</h2>
   <p class="mb-8 text-titleGray"><%= info.try(:content) %></p>
   <% if user_signed_in? %>
     <div class="hidden md:flex h-[60px]">
@@ -26,7 +26,7 @@
       <%= f.text_area :message, class: "shadow-sm appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-ripe-lemon-500 focus:border-ripe-lemon-500 focus:z-10 sm:text-sm lg:min-h-[8rem]", placeholder: "Comment pouvons-nous vous aider ?", required: true %>
     </div>
     <div class="mt-4">
-      <%= f.submit "Envoyer", class: "font-comfortaa text-[15px] text-white w-fit whitespace-nowrap flex justify-center py-4 px-10 bg-paradiso-500 hover:bg-paradiso-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ripe-lemon-500 h-fit" %>
+      <%= f.submit "Envoyer", class: "font-comfortaa text-[15px] text-white w-fit whitespace-nowrap flex justify-center py-4 px-10 bg-fun-green-500 hover:bg-fun-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ripe-lemon-500 h-fit" %>
     </div>
   <% end %>
 </div>

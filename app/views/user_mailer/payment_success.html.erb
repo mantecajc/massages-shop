@@ -1,8 +1,19 @@
 <p>Bonjour <%= @name %>,</p>
-<p>Merci pour votre commande.</p>
 <br>
-<p>Vous trouverez ci-joint votre bon d'achat <strong>valable 6 mois.</strong></p>
-<p>Commande : <strong><%= @checkout_id %></strong></p>
-<br>
+
+<div>Merci pour votre commande. Vous trouverez ici tous les détails :</div>
+<ul>
+  <li>Soin : <%= @massage_title %></li>
+  <li>Durée : <%= @massage_duration %> minutes</li>
+  <li>Nº commande : <%= @checkout_id %></li>
+  <li>Date de réservation : <%= @date_start_validity %></li>
+</ul>
+<p>Votre commande est valable jusqu'au<strong> <%= @date_end_validity %>.</strong></p>
+<p>Vous pouvez maintenant imprimer votre carte cadeau, elle vous sera demandé lors du rendez vous.</p>
+<p>Merci de nous contacter pour réserver un créneau.</p>
 <p>À très vite,</p>
-<p><strong>Les Massages de Pauline</strong></p>
+<br>
+
+<div><strong>Les Massages de Pauline</strong></div>
+<a href="https://www.google.com/maps?q=9+Rue+du+Tabuteau,49370+Saint-Clément-de-la-Place" target="_blank">9 Rue du Tabuteau, <br>49370 Saint-Clément-de-la-Place</a>
+<div>06 70 08 20 61</div>

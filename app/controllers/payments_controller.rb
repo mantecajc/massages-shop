@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
         },
       }],
       mode: 'payment',
-      success_url: checkout_url + "?session_id={CHECKOUT_SESSION_ID}",
+      success_url: checkout_url + "?session_id={CHECKOUT_SESSION_ID}" + "&name=#{massage.title}" + "&duration=#{massage.duration}",
       cancel_url: massage_url(massage),
     })
 
@@ -30,11 +30,12 @@ class PaymentsController < ApplicationController
 
   def checkout
     session = Stripe::Checkout::Session.retrieve(params[:session_id])
-
     @email = session[:customer_details][:email]
     @name = session[:customer_details][:name]
-    @checkout_id =  session[:id]
+    @massage_title = params[:name]
+    @massage_duration = params[:duration]
+    @checkout_id = session[:id].slice(-20, 20)
 
-    UserMailer.payment_success(@name, @email, @checkout_id).deliver_now
+    UserMailer.payment_success(@name, @email, @checkout_id, @massage_title, @massage_duration, session[:created]).deliver_now
   end
 end
