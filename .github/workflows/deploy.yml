@@ -1,0 +1,26 @@
+name: Deploy
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# Running two deploys at once, targeting the same environment, could lead to errors or a corrupted deployment. This snippet prevents that. In practice, production can be whatever string you want. GitHub will ensure that all workflows that use the same group are executed one at a time. This means deploys will never overlap, even if multiple pushes to main are made in a short amount of time.
+concurrency:
+  group: production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy app on Digital Ocean
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          key: ${{secrets.SSH_KEY}}
+          username: ${{secrets.SSH_USERNAME}}
+          script_stop: true
+          script: |
+            cd ../massages-shop
+            git pull
+            echo "Deployment success"
