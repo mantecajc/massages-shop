@@ -4,7 +4,8 @@ class UserMailer < ApplicationMailer
     @email = email
     @subject = subject
     @message = message
-    mail(to: 'lesmassagesdepauline49@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
+    # mail(to: 'lesmassagesdepauline49@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
+    mail(to: 'mantecajc@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
   end
 
   def payment_success(name, email, checkout_id, title, duration, session_created_at)
