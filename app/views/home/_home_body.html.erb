@@ -5,6 +5,7 @@
         <img src="<%= asset_path 'logo.svg' %>" alt="logo" class="w-[76%]">
       </div>
     </div>
+    <h1>Environement : <%= Rails.env %></h1>
     <div class="relative w-fit lg:w-full sm:flex sm:justify-center lg:justify-normal">
       <% unless home.secondary_photo.key.nil? %>
       <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "sm:w-2/3 lg:hidden" %>
