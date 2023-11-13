@@ -55,6 +55,13 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
+
+  config.cloudinary_url_options = {
+    cloud_name: ENV['CLOUDINARY_CLOUD_NAME'],
+    api_key:    ENV['CLOUDINARY_API_KEY'],
+    api_secret: ENV['CLOUDINARY_API_SECRET']
+  }
+
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
