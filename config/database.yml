@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: LES_MASSAGES_DE_PAULINE_production
-  username: LES_MASSAGES_DE_PAULINE
+  username: <%= ENV["LES_MASSAGES_DE_PAULINE_DATABASE_USER"] %>
   password: <%= ENV["LES_MASSAGES_DE_PAULINE_DATABASE_PASSWORD"] %>
