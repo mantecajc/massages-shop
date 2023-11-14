@@ -8,10 +8,10 @@
     <h1>Environement : <%= Rails.env %></h1>
     <div class="relative w-fit lg:w-full sm:flex sm:justify-center lg:justify-normal">
       <% unless home.secondary_photo.key.nil? %>
-      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "sm:w-2/3 lg:hidden" %>
+      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "sm:w-2/3 lg:hidden", :cloud_name => ENV['CLOUDINARY_CLOUD_NAME'] %>
       <% end %>
       <% unless home.primary_photo.key.nil? %>
-      <%= cl_image_tag home.try(:primary_photo).key, crop: :fill, class: "hidden lg:block lg:h-auto lg:w-4/5" %>
+      <%= cl_image_tag home.try(:primary_photo).key, crop: :fill, class: "hidden lg:block lg:h-auto lg:w-4/5", :cloud_name => ENV['CLOUDINARY_CLOUD_NAME'] %>
       <% end %>
       <div class="box-border absolute -top-12 w-20 h-20 md:w-28 md:h-28 -left-10 lg:w-32 lg:h-32 lg:-left-16 lg:top-12 border-2 border-yellow-400 transform rotate-45"></div>
       <div class="box-border absolute w-24 h-24 lg:w-32 lg:h-32 -right-10 -bottom-4 lg:right-[4.5rem] lg:-bottom-12 border-2 border-yellow-400 transform rotate-45"></div>
@@ -21,7 +21,7 @@
   <div class="flex flex-col-reverse lg:flex-col items-center grow w-full lg:pt-32 lg:ml-2 lg:items-left">
     <div class="relative w-full lg:w-11/12">
       <% unless home.secondary_photo.key.nil? %>
-      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "hidden w-full h-auto lg:block" %>
+      <%= cl_image_tag home.try(:secondary_photo).key, crop: :fill, class: "hidden w-full h-auto lg:block", :cloud_name => ENV['CLOUDINARY_CLOUD_NAME'] %>
       <% end %>
       <div class="hidden lg:block box-border absolute w-40 h-40 -right-16 -top-16 border-2 border-yellow-400 transform rotate-45"></div>
     </div>
