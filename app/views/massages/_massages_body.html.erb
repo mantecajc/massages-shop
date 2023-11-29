@@ -1,7 +1,7 @@
 <div id="massages_body" class="flex flex-col bg-snow-drift-500 items-center">
   <% categories.each do |category| %>
 		<div class="w-full min-h-[12rem] lg:h-[18rem] bg-no-repeat bg-cover flex justify-center flex-col p-6 lg:p-[5%] lg:pb-[3%] lg:justify-end" style="background-image: url('<%= category.photo.url %>');">
-			<div class="flex justify-begin text-white font-bold font-charmonman text-[2.1rem] md:text-[2.5rem] lg:text-[3rem] w-full lg:py-[1.5rem] lg:px-14">
+			<div class="flex justify-begin text-fun-green-500 font-bold font-charmonman text-[2.1rem] md:text-[2.5rem] lg:text-[3rem] w-full lg:py-[1.5rem] lg:px-14">
 				<%= category.title %>
 			</div>
 			<% if user_signed_in? %>
