@@ -1,6 +1,4 @@
-# TODO: to change
-
 class ApplicationMailer < ActionMailer::Base
-  default from: "mantecajc@gmail.com"
+  default from: "from@example.com"
   layout "mailer"
 end
