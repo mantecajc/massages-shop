@@ -1,6 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  # TODO: to change
-  # default from: "lesmassagesdepauline49@gmail.com"
-  default from: "mantecajc@gmail.com"
+  default from: ENV['MAILJET_SENDER']
   layout "mailer"
 end

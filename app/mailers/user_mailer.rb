@@ -4,9 +4,7 @@ class UserMailer < ApplicationMailer
     @email = email
     @subject = subject
     @message = message
-    # TODO: to change
-    # mail(to: 'lesmassagesdepauline49@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
-    mail(to: 'mantecajc@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
+    mail(to: ENV['MAILJET_SENDER'], subject: 'Nouveau message | Les Massages de Pauline')
   end
 
   def payment_success(name, email, checkout_id, title, duration, session_created_at)
@@ -23,6 +21,6 @@ class UserMailer < ApplicationMailer
     attachments["carte_cadeau.pdf"] = File.read("carte_cadeau.pdf")
 
     mail(to: email, subject: "Votre commande | Les Massages de Pauline")
-    mail(to: 'lesmassagesdepauline49@gmail.com', subject: "Nouvelle réservation : #{@checkout_id}")
+    mail(to: ENV['MAILJET_SENDER'], subject: "Nouvelle réservation : #{@checkout_id}")
   end
 end
