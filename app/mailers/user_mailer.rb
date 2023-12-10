@@ -4,6 +4,7 @@ class UserMailer < ApplicationMailer
     @email = email
     @subject = subject
     @message = message
+    # TODO: to change
     # mail(to: 'lesmassagesdepauline49@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
     mail(to: 'mantecajc@gmail.com', subject: 'Nouveau message | Les Massages de Pauline')
   end
