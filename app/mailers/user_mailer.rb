@@ -21,6 +21,5 @@ class UserMailer < ApplicationMailer
     attachments["carte_cadeau.pdf"] = File.read("carte_cadeau.pdf")
 
     mail(to: email, subject: "Votre commande | Les Massages de Pauline")
-    mail(to: ENV['MAILJET_SENDER'], subject: "Nouvelle réservation : #{@checkout_id}")
   end
 end
