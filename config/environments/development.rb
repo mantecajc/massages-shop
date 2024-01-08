@@ -10,9 +10,11 @@ Rails.application.configure do
 
   config.hosts << "www.lesmassagesdepauline.com"
 
-  config.force_ssl = true
+  # config.force_ssl = true
 
-  config.action_mailer.default_url_options = { host: 'www.lesmassagesdepauline.com', protocol: 'https' }
+  # config.action_mailer.default_url_options = { host: 'www.lesmassagesdepauline.com', protocol: 'https' }
+
+  config.action_controller.forgery_protection_origin_check = false
 
   # Do not eager load code on boot.
   config.eager_load = false
