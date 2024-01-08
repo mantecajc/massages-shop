@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
     @email = email
     @subject = subject
     @message = message
-    mail(to: ENV['MAILJET_SENDER_TEST'], subject: 'Nouveau message | Les Massages de Pauline')
+    mail(to: ENV['MAILJET_SENDER'], subject: 'Nouveau message | Les Massages de Pauline')
   end
 
   def payment_success(name, email, checkout_id, title, duration, session_created_at)
