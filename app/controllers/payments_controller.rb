@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
         },
       }],
       mode: 'payment',
-      success_url: checkout_url + "?session_id={CHECKOUT_SESSION_ID}" + "&name=#{massage.title}" + "&duration=#{massage.duration}",
+      success_url: checkout_url + "?session_id={CHECKOUT_SESSION_ID}" + "&name=#{massage.title.parameterize}" + "&duration=#{massage.duration}",
       cancel_url: massage_url(massage),
     })
 
