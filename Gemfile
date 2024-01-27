@@ -66,6 +66,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'byebug', '~> 11.1', '>= 11.1.3'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 6.1'
 end
 
 group :development do
@@ -86,7 +87,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem 'rspec-rails', '~> 6.1'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
   gem "selenium-webdriver"
   gem "webdrivers"
 end
