@@ -89,7 +89,6 @@ group :test do
   gem "capybara"
   gem 'database_cleaner', '~> 2.0', '>= 2.0.2'
   gem "selenium-webdriver"
-  gem "webdrivers"
 end
 
 gem "view_component", "~> 3.3"
