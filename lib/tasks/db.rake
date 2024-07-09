@@ -5,7 +5,6 @@ task :dump => :environment do
 
   cmd = nil
   with_config do |app, host, db, user|
-    binding.pry
     cmd = "pg_dump --host #{host} --username #{user} --verbose --clean --no-owner --no-acl --format=c #{db} > #{Rails.root}/db/#{app}.dump"
   end
   puts cmd
@@ -20,6 +19,7 @@ task :restore => :environment do
   end
   Rake::Task["db:drop"].invoke
   Rake::Task["db:create"].invoke
+  Rake::Task["db:migrate"].invoke
   puts cmd
   exec cmd
 end
