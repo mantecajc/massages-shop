@@ -35,3 +35,4 @@
 .env*
 
 .byebug_history
+/db/les_massages_de_pauline.dump
