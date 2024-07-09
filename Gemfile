@@ -55,6 +55,8 @@ gem 'stripe', '~> 9.3'
 
 gem 'combine_pdf', '~> 1.0', '>= 1.0.24'
 
+gem 'pry-byebug', '~> 3.10', '>= 3.10.1'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
