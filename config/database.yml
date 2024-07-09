@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: LES_MASSAGES_DE_PAULINE_development
+  username: <%= ENV["USERNAME_DB_DEVELOPMENT"] %>
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
