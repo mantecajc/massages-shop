@@ -21,7 +21,7 @@ class InfoController < ApplicationController
       }
     )
     subject = 'Nouveau message | Les Massages de Pauline'
-    SendEmailService.new(to: ENV['MAILJET_SENDER_TEST'], html_content: html_content, subject: subject).call
+    SendEmailService.new(to: ENV['MAILJET_SENDER'], html_content: html_content, subject: subject).call
 
     respond_to do |format|
       format.turbo_stream { flash.now[:success] = 'Merci pour votre message. Nous revenons vers vous très vite !' }
