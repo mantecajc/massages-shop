@@ -87,7 +87,7 @@ Rails.application.configure do
   # config.hotwire_livereload.listen_paths << Rails.root.join("app/assets/builds")
 
   # Production :
-  config.action_mailer.delivery_method = :mailjet
+  config.action_mailer.delivery_method = :mailjet_api
   config.action_mailer.mailjet_settings = {
     api_key: ENV['MAILJET_API_KEY'],
     secret_key: ENV['MAILJET_SECRET_KEY']
