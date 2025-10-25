@@ -11,17 +11,35 @@ class InfoController < ApplicationController
   end
 
   def contact
-    # TODO PROD: check that deliver_now works.
-    UserMailer.contact_email(
-      params[:name],
-      params[:email],
-      params[:subject],
-      params[:message]
-    ).deliver_now
+    html_content = ApplicationController.render(
+      partial: "user_mailer/contact_email",
+      locals: {
+        name: params[:name],
+        email: params[:email],
+        subject: params[:subject],
+        message: params[:message]
+      }
+    )
+
+    Mailjet::Send.create(
+      messages: [{
+        'From'=> {
+          'Email'=> ENV['MAILJET_SENDER'],
+          'Name'=> 'Nouveau message | Les Massages de Pauline'
+        },
+        'To'=> [{
+          'Email'=> ENV['MAILJET_SENDER_TEST'],
+          'Name'=> params[:name]
+        }],
+        'Subject'=> 'Nouveau message | Les Massages de Pauline',
+        # 'TextPart'=> params[:message],
+        'HTMLPart'=> html_content
+      }]
+    )
 
     respond_to do |format|
-      format.turbo_stream { flash.now[:success] = 'Votre message a été envoyé avec succès' }
-      format.html { redirect_to home_index_path, notice: 'Votre message a été envoyé avec succès' }
+      format.turbo_stream { flash.now[:success] = 'Merci pour votre message. Nous revenons vers vous très vite !' }
+      format.html { redirect_to home_index_path, notice: 'Merci pour votre message. Nous revenons vers vous très vite !' }
     end
   end
 
