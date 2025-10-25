@@ -35,7 +35,35 @@ class PaymentsController < ApplicationController
     @massage_title = params[:name]
     @massage_duration = params[:duration]
     @checkout_id = session[:id].slice(-20, 20)
+    @date_start_validity = Time.at(session[:created]).strftime("%d-%m-%Y")
+    @date_end_validity = FetchEndValidityDate.new(@date_start_validity, 6).call
 
-    UserMailer.payment_success(@name, @email, @checkout_id, @massage_title, @massage_duration, session[:created]).deliver_now
+    html_content = ApplicationController.render(
+      partial: "user_mailer/payment_success",
+      locals: {
+        name: @name,
+        massage_title: @massage_title,
+        massage_duration: @massage_duration,
+        checkout_id: @checkout_id,
+        date_start_validity: @date_start_validity,
+        date_end_validity: @date_end_validity
+      }
+    )
+
+    GenerateGiftPdf.new(@massage_title, @massage_duration, @date_end_validity, @checkout_id).call
+
+    attachments = [
+      {
+        'ContentType'=> 'application/pdf',
+        'Filename'=> 'carte_cadeau.pdf',
+        'Base64Content'=> Base64.encode64(File.read("carte_cadeau.pdf"))
+      }
+    ]
+
+    SendEmailService.new(
+      to: @email,
+      html_content: html_content,
+      subject: "Votre commande | Les Massages de Pauline",
+      attachments: attachments).call
   end
 end

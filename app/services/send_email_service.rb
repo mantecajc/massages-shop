@@ -2,12 +2,13 @@
 
 
 class SendEmailService
-  attr_reader :to, :html_content, :subject
+  attr_reader :to, :html_content, :subject, :attachments
 
-  def initialize(to:, html_content:, subject:)
+  def initialize(to:, html_content:, subject:, attachments: [])
     @to = to
     @html_content = html_content
     @subject = subject
+    @attachments = attachments
   end
 
   def call
@@ -23,7 +24,8 @@ class SendEmailService
         }],
         'Subject'=> subject,
         # 'TextPart'=> params[:message], # Note(mantecajc): value not printed in the email when sending HTMLPart
-        'HTMLPart'=> html_content
+        'HTMLPart'=> html_content,
+        'Attachments'=> attachments
       }]
     )
   end
